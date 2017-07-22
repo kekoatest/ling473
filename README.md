@@ -1,10 +1,12 @@
 # LING 473 Intro to Computational Linguistics
 
+[Course Website](http://courses.washington.edu/ling473/index.html)
+
 ## Assignments
 
 ### Assignment 1
 
-Written using LaTex
+Basic syntax, counting, and statistics. Written using LaTex.
 
 ### Assignment 2
 
@@ -23,3 +25,6 @@ Written using LaTex
 ### Project 2
 
 ### Project 3
+
+## Paper Review
+
