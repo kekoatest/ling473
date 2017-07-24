@@ -1,0 +1,134 @@
+\documentclass[10pt]{article}
+
+\usepackage{fullpage}
+\usepackage{forest}
+
+\begin{document}
+\noindent
+Kekoa Riggin\\
+LING 566\\
+HW 3
+
+\section*{Question 1}
+\noindent
+Prior to applying to CLMS, my experience had been in translation and localization. During my work in these fields, I realized that the industries depended entirely upon the technology that is standard in localization workflows. My current opinion is that there will be a $\approx$ 95 \% decrease in translation work due to automation within my lifetime. My original career goal was to contribute to that decrease as much as possible, but now I see that there is even more demand for NLPers in the fields of speech recognition and virtual assistants. I consider all the doors to be open to me, but there is much work ahead. 
+
+\section*{Question 2}
+
+\subsection*{Part a}
+\noindent
+\begin{enumerate}
+\item
+What was see was a gas can, which exploded.
+
+\begin{forest}
+	[S
+		[N [I]]
+		[VP 
+			[V [saw]]
+			[VP
+				[NP
+					[D [that]]
+					[N [gas can]]
+				]
+				[V [explode]]
+			]
+		]
+	]
+\end{forest}
+
+\item 
+What was seen was the ability that gas has to explode
+
+\begin{forest}
+	[S
+		[N [I]]
+		[VP 
+			[V [saw]]
+			[PP
+				[IN [that]]
+				[S
+					[N [gas]]
+					[VP 
+						[V [can]]
+						[V [explode]]
+					]
+				]
+			]
+		]
+	]
+\end{forest}
+
+\item
+What was seen was a particular gas's ability to explode
+
+\begin{forest}
+	[S
+		[N [I]]
+		[VP 
+			[V [saw]]
+			[S
+				[NP
+					[D [that]]
+					[N [gas]]
+				]					
+				[VP
+					[V [can]]
+					[V [explode]]
+				]
+			]
+		]
+	]
+\end{forest}
+
+\end{enumerate}
+
+\subsection*{Part b}
+\noindent
+\begin{enumerate}
+\item
+(S
+	(N I)
+	(VP saw
+		(NP that
+			gas can)
+		(VP explode)))
+
+\item 
+(S
+	(NP I)
+	(VP saw
+		(PP that
+			(S gas
+				(VP can
+					explode)))))
+
+\item
+(S
+	(NP I)
+	(VP saw
+		(VP (NP that
+				gas)
+			(VP can
+				explode))))
+
+\end{enumerate}
+
+\section*{Question 3}
+% six-letter words from alphabet
+
+\section*{Question 4}
+% how many arrangements chinese characters
+
+\section*{Question 5}
+
+\subsection*{Part a}
+% how many pairwise comparisons between docs od same
+
+\subsection*{Part b}
+% how many pairwise comparisons between docs different
+
+\section*{Extra Credit}
+% expression that gives the number of unordered sets
+
+\end{document}
