@@ -1,4 +1,4 @@
-\documentclass[10pt]{article}
+\documentclass[11pt]{article}
 
 \usepackage{fullpage}
 \usepackage{forest}
@@ -155,6 +155,14 @@ $ 171 - 60 = 111 $
 
 \section*{Extra Credit}
 \noindent
+To find the answer to this question, I wrote out the sample space. For example, 5 choose 2:\\
+\big[ aa, ab, ac, ad, ae \big]\\
+\big[ bb, bc, bd, be \big]\\
+\big[ cc, cd, ce \big]\\
+\big[ dd, de \big]\\
+\big[ ee \big]\\
+By looking at this sample space, we can see that the total number of unordered sets while allowing repetitions is $ (n) + (n-1) ... + (n-n) $.\\
+Previously, I noticed that the total number of unordered sets while \textbf{not} allowing repetitions$ n $ choose $ k $ was $ (n - 1) + (n-2) ... + (n-n) $. So I rewrote the $ n $ choose $ k $ formula to use $ n + 1 $ in the place of $ n $. After three checks, I determined this to be the proper adjustment for the formula, thus the formula for finding the number of unordered set while allowing for repetitions is:\\
 $ \frac{(n + 1)!}{k!((n + 1) - k)!}$
 
 \end{document}
