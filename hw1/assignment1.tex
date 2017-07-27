@@ -2,8 +2,19 @@
 
 \usepackage{fullpage}
 \usepackage{forest}
+\usepackage{tabto}
+% \newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+% \newcommand{\tab}[1]{\hspace{.2\textwidth}\rlap{#1}}
+
+% STYLE CHEAT SHEET
+% \textit{}
+% \textbf{}
+% \tab{} \\start with one \tab{} per line
+% ``quotations''
+% \noindent
 
 \begin{document}
+\NumTabs{20}
 \noindent
 Kekoa Riggin\\
 LING 566\\
@@ -60,7 +71,7 @@ What was seen was the ability that gas has to explode
 \end{forest}
 
 \item
-What was seen was a particular gas's ability to explode
+What was seen was a particular gas's ability to explode. Here, there is an ommitted ``that'': \textit{I saw ``that'' that gas can explode}.
 
 \begin{forest}
 	[S
@@ -87,48 +98,63 @@ What was seen was a particular gas's ability to explode
 \noindent
 \begin{enumerate}
 \item
-(S
-	(N I)
-	(VP saw
-		(NP that
-			gas can)
-		(VP explode)))
+(S\tab{}(N I)\\
+\tab{}\tab{}(VP saw\\
+\tab{}\tab{}\tab{}(NP that\\
+\tab{}\tab{}\tab{}\tab{}gas can)\\
+\tab{}\tab{}\tab{}(VP explode)))
 
 \item 
-(S
-	(NP I)
-	(VP saw
-		(PP that
-			(S gas
-				(VP can
-					explode)))))
+(S\tab{}(NP I)\\
+\tab{}\tab{}(VP saw\\
+\tab{}\tab{}\tab{}(PP that\\
+\tab{}\tab{}\tab{}\tab{}(S gas\\
+\tab{}\tab{}\tab{}\tab{}\tab{}(VP can\\
+\tab{}\tab{}\tab{}\tab{}\tab{}\tab{}explode)))))
 
 \item
-(S
-	(NP I)
-	(VP saw
-		(VP (NP that
-				gas)
-			(VP can
-				explode))))
+(S\tab{}(NP I)\\
+\tab{}\tab{}(VP saw\\
+\tab{}\tab{}\tab{}(VP (NP that\\
+\tab{}\tab{}\tab{}\tab{}\tab{}gas)\\
+\tab{}\tab{}\tab{}\tab{}(VP can\\
+\tab{}\tab{}\tab{}\tab{}\tab{}explode))))
 
 \end{enumerate}
 
 \section*{Question 3}
-% six-letter words from alphabet
+\noindent
+For all of the orderings of the letters of the alphabet, we use the function $ 26^{6} $. But because we do not want words that have only consonants or only vowels, we need to subtract the number of words that can be formed with only those sybols. So we subtract $ 21^{6} $ for consonants and $ 5^{6} $ for vowels. Thus our equation is:\\
+$ 26^{6} - 21^{6} - 5^{6} = 223134030 $
 
 \section*{Question 4}
-% how many arrangements chinese characters
+\noindent
+Because repetition is permitted, but we want to find distinct tuples, we find the factorial of the total number of characters divided by the product of the factorials of the numbers of repetitions.\\
+\noindent
+There are nine characters and characters 1-4 and 5-6 are idential. Therefore, our formula will be:\\
+\noindent
+$ \frac{9!}{4! \times 2!} = 362832 $
 
 \section*{Question 5}
 
 \subsection*{Part a}
-% how many pairwise comparisons between docs od same
+\noindent
+This is a classic $ n $ choose $ k $ situation because we cannot perform a pairwise comparison on two copies of the same document and comparing documents $ {a,b} $ is the same as comparing documents $ {b,a} $.\\
+Thus, the formula we will use is:\\
+$ \frac{n!}{k!(n-k)!} $\\
+And our answer will be the sum of $ n $ choose $ k $ for each document type.\\
+So for conference proceedings, journal articles, and workshop abstracts, we use the following formulas respctively:\\
+$ \frac{7!}{2! \times 5!} = 21 $ $ \frac{9!}{2!\times 7!} = 36 $ $ \frac{3!}{2! \times 1!} = 3 $\\
+Which makes the total number of pairwise comparisons between documents of the same type 60.
 
 \subsection*{Part b}
-% how many pairwise comparisons between docs different
+This is also a $ n $ choose $ k $ situation; however, it is more complex. In these cases, $ n $ will be the sum of the number of documents per document type. Then, we will subtract the sum of the number of pairwise comparisons of the same document type.\\
+$ \frac{(7 + 9 + 3)!}{2! \times (7 + 9 + 3 - 2)!} = \frac{19!}{2! \times 17!} = 171 $\\
+And taking the 60 total pairwise comparisons from documents of the same type from above:\\
+$ 171 - 60 = 111 $
 
 \section*{Extra Credit}
-% expression that gives the number of unordered sets
+\noindent
+$ \frac{(n + 1)!}{k!((n + 1) - k)!}$
 
 \end{document}
