@@ -1,0 +1,283 @@
+\documentclass[11pt]{article}
+
+\usepackage{fullpage}
+\usepackage{forest}
+\usepackage{tabto}
+% \newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+% \newcommand{\tab}[1]{\hspace{.2\textwidth}\rlap{#1}}
+
+% STYLE CHEAT SHEET
+% \textit{}
+% \textbf{}
+% \tab{} \\start with one \tab{} per line
+% ``quotations''
+% \noindent
+
+\begin{document}
+\NumTabs{20}
+\noindent
+Kekoa Riggin\\
+LING 473\\
+HW 2
+
+\section*{Question 1}
+
+\subsection*{Part a}
+\noindent
+*See end of document for tables of sample spaces\\
+
+\noindent
+\textbf{Situation E: Either word contains y}\\
+P(E either word contains y) = P(A contains y) + P(B contains y) - P(A $\cap$ B). \\
+P(E) = P(A $\cup$ B) = P(A) + P(B) - P(A $\cap$ B). \\
+P(E) = 0.375 + 0.0 - 0.0. \\
+$ P(E)= 0.375 $ \\
+
+\noindent
+\textbf{Situation F: Both words contain e}\\
+P(F both words contain e) = P(A contains e) P(B contains e $\mid$ A). \\
+P(F) = P(A $\cap$ B) = P(A)P(B$\mid$A). \\
+P(F) = 0.5 $\times$ 0.5. \\
+$ P(F)= 0.25$ \\
+
+\noindent
+\textbf{Situation G: both words contain the same number of letters}\\
+For this question, I added the probabilities that both words have 3 and 7 letters since there were no other variables that worked.\\ 
+P(G both words contain $x$ number of letters) = P(A contains $x$) P(B contains $x \mid$ A). \\
+P(G) = P(A $\cap$ B) = P(A)P(B$\mid$A). \\
+P(G $x=3$) = 0.25 $\times$ 0.125. \\
+P(G $x=7$) = 0.25 $\times$ 0.125. \\
+P(G) = P(G $x=3$) + P(G $x=7$). \\
+$ P(G)= 0.0625$ \\
+
+\noindent
+\textbf{Situation H: Either word contains 2 or more vowels}\\
+P(H either words contains 2 vowels) = P(A contains 2) + P(B contains 2) - P(A $\cap$ B). \\
+P(H) = P(A $\cup$ B) = P(A) + P(B) - P(A $\cap$ B). \\
+P(H) = 0.875 + 0.75 - 0.65625. \\
+$ P(H)= 0.96875$ \\
+
+\noindent
+\textbf{Situation $ P(E\cup H)= $ }\\
+P($ P(E\cup H)= $) = P(E) + P(H) - P(E $\cap$ H)\\
+P($ P(E\cup H)= $) = 0.375 + 0.96875 - P(E $\cap$ H)\\
+P(E $\cap$ H) = P(E)P(H $\mid$ E) = 0.375 $\times$ 0.91666 = 0.34375\\
+P($ P(E\cup H)= $) = 1.34375 - 0.34375\\
+$ P(E\cup H)= 1.0$ \\
+
+\noindent
+\textbf{Situation $P(F\cap H)= $ }\\
+P(F $\cap$ H) = P(F)P(H$\mid$F). \\
+P(F $\cap$ H) = 0.25 $\times$ 1.0. \\
+$ P(F\cap H)= 0.25$ \\
+
+\noindent
+\textbf{Situation $ P(E\cap F\cap G)= $ }\\
+P(E $\cap$ F $\cap$ G) = P(E)P(F$\mid$E)P(G$\mid$EF)\\
+P(E $\cap$ F $\cap$ G) = 0.375 $\times$ 0.3333 $\times$ 0.0 \\
+$ P(E\cap F\cap G)= 0.0$ \\
+
+\noindent
+\textbf{Situation $ P(H\cup G)= $ }\\
+P(H $\cup$ G) = P(H) + P(G) - P(H $\cap$ G)\\
+P(H $\cap$ G) = P(H)P(G$\mid$H) = 0.96875 $\times$ .064516 = 0.625\\
+P(H $\cup$ G) = 0.96875 + 0.0625 - 0.625\\
+$ P(H\cup G)= 0.96875 $ \\
+
+\noindent
+\textbf{Situation $ P(H\cap F^{C})= $ }\\
+P(H $\cap F^{C}$) = P(H)P($F^{C}\mid$H)\\
+P(H $\cap F^{C}$) = 0.96875 $\times$ 0.741935\\
+$ P(H\cap F^{C})= 0.71875$ \\
+
+\subsection*{Part b}
+\noindent *Work shown below
+\noindent
+\begin{table}[h!]
+  \begin{tabular}{||c||c|c|c||}
+  	\hline
+    - & E & F & G\\
+    \hline\hline
+    H & - & - & -\\
+    \hline
+    G & - & X & -\\
+    \hline
+    F & - & - & -\\
+    \hline
+  \end{tabular}
+\end{table}
+
+\noindent
+P(E $\cap$ F) $ \neq $ P(E)P(F $\mid$ E)\\
+P(F $\mid$ E) = P(0.3333)\\
+P(E $\cap$ F) = 0.375 $\times$ 0.3333 = 0.124999 $ \neq $ 0.09375 = P(E)P(F)\\
+
+\noindent
+P(E $\cap$ G) $ \neq $ P(E)P(G $\mid$ E)\\
+P(G $\mid$ E) = 0.34375\\
+P(E $\cap$ G) = 0.375 $\times$ 0.34375 = 0.01171875 $ \neq $ 0.0234375 = P(E)P(G)\\
+
+\noindent
+P(E $\cap$ H) $ \neq $ P(E)P(H $\mid$ E)\\
+P(H $\mid$ E) = 0.34375\\
+P(E $\cap$ H) = 0.375 $\times$ 0.34375 = 0.12891 $ \neq $ 0.36328 = P(E)P(H)\\
+
+\noindent
+F and G are mutually exclusive\\
+\noindent
+*See tables at end of document
+
+\noindent
+P(F $\cap$ H) $ \neq $ P(F)P(H $\mid$ F)\\
+P(H $\mid$ F) = 1.0\\
+P(F $\cap$ H) = 0.25 $\times$ 1.0 = 0.25 $ \neq $ 0.24219 = P(F)P(H)\\
+
+\noindent
+P(G $\cap$ H) $ \neq $ P(G)P(H $\mid$ F)\\
+P(H $\mid$ G) = 1.0\\
+P(G $\cap$ H) = 0.625 $\times$ 1.0 = 0.625 $ \neq $ 0.065391 = P(G)P(H)\\
+
+\section*{Question 2}
+
+\subsection*{Part a}
+\noindent
+Because the linguist already deciphered 22 of the 32 glyphs, the probability of the linguist knowing 1 of the new glyphs is 22/32. Because the linguist does not know whether the new 8 glyphs are distinct or not, to solve this problem, each of the 8 glyphs has the same probability as the first for being one of the glyphs known by the linguist. Therefore, the probability that the linguist fully understands the new inscriptions can be represented by:\\\\
+$ P(A) = ( \frac{22}{32} )^{8} = 0.0499 $
+
+\subsection*{Part b}
+\noindent
+Because we want to know the probability of the linguist having already deciphered \textbf{at least} 4 of the new glyphs, we must sum the probabilities of them knowing 4, 5, 6, 7, and 8 glyphs, which can be represented by:\\\\
+$ P(ABCDE) = ( \frac{22}{32} )^{4} + ( \frac{22}{32} )^{5} + ( \frac{22}{32} )^{6} + ( \frac{22}{32} )^{7} + ( \frac{22}{32} )^{8} = 0.605092 $
+
+\section*{Extra Credit}
+\noindent
+Because the linguist knows that each of the 8 glyphs is distinct, we know that the linguist can only choose any one glyph once. This means that this cannot be a $ n^{k} $ situation, but must be a $ {{n}\choose{k}} $ kind of problem. The probability that the linguist know 4 or more of the glyphs can be represented by the sum of the $ {{n}\choose{k}} $ number of possible combinations for 4 or more known glyphs divided by the $ {{n}\choose{k}} $ number of total possible 8 glyph combinations as follows:\\\\
+$ P(F) = \frac{{{22}\choose{4}}+{{22}\choose{5}}+{{22}\choose{6}}+{{22}\choose{7}}+{{22}\choose{8}}}{{{32}\choose{8}}} = 0.056908 $
+
+\section*{Tables from Question 1a}
+\begin{table}[b]
+\caption{P(E either word contains y)}
+  \begin{tabular}{|c|cccccccc|}
+  	\hline
+    - & Monkey & Donkey & Yak & Kangaroo & Aardvark & Antelope & Puma & Cheetah\\
+    \hline
+    Whale & E & E & E & - & - & - & - & -\\
+    Shark & E & E & E & - & - & - & - & -\\
+    Dolphin & E & E & E & - & - & - & - & -\\
+    Eel & E & E & E & - & - & - & - & -\\
+    \hline
+  \end{tabular}
+\end{table}
+% ----------------------------------------------------
+\begin{table}
+\caption{P(F both words contain e)}
+  \begin{tabular}{|c|cccccccc|}
+  	\hline
+    - & Monkey & Donkey & Yak & Kangaroo & Aardvark & Antelope & Puma & Cheetah\\
+    \hline
+    Whale & F & F & - & - & - & F & - & F\\
+    Shark & - & - & - & - & - & - & - & -\\
+    Dolphin & - & - & - & - & - & - & - & -\\
+    Eel & F & F & - & - & - & F & - & F\\
+    \hline
+  \end{tabular}
+\end{table}
+% ----------------------------------------------------
+\begin{table}
+\caption{P(G both words contain same number of letters)}
+  \begin{tabular}{|c|cccccccc|}
+  	\hline
+    - & Monkey & Donkey & Yak & Kangaroo & Aardvark & Antelope & Puma & Cheetah\\
+    \hline
+    Whale & - & - & - & - & - & - & - & -\\
+    Shark & - & - & - & - & - & - & - & -\\
+    Dolphin & - & - & - & - & - & - & - & G\\
+    Eel & - & - & G & - & - & - & - & -\\
+    \hline
+  \end{tabular}
+\end{table}
+% ----------------------------------------------------
+\begin{table}
+\caption{P(H either word contains 2 vowels)}
+  \begin{tabular}{|c|cccccccc|}
+  	\hline
+    - & Monkey & Donkey & Yak & Kangaroo & Aardvark & Antelope & Puma & Cheetah\\
+    \hline
+    Whale & H & H & H & H & H & H & H & H\\
+    Shark & H & H & - & H & H & H & H & H\\
+    Dolphin & H & H & H & H & H & H & H & H\\
+    Eel & H & H & H & H & H & H & H & H\\
+    \hline
+  \end{tabular}
+\end{table}
+% ----------------------------------------------------
+\begin{table}
+\caption{P($ P(E\cup H)= $ )}
+  \begin{tabular}{|c|cccccccc|}
+  	\hline
+    - & Monkey & Donkey & Yak & Kangaroo & Aardvark & Antelope & Puma & Cheetah\\
+    \hline
+    Whale & HE & HE & HE & H & H & H & H & H\\
+    Shark & HE & HE & E & H & H & H & H & H\\
+    Dolphin & HE & HE & HE & H & H & H & H & H\\
+    Eel & HE & HE & HE & H & H & H & H & H\\
+    \hline
+  \end{tabular}
+\end{table}
+% ----------------------------------------------------
+\begin{table}
+\caption{P($ P(F\cap H)= $)}
+  \begin{tabular}{|c|cccccccc|}
+  	\hline
+    - & Monkey & Donkey & Yak & Kangaroo & Aardvark & Antelope & Puma & Cheetah\\
+    \hline
+    Whale & FH & FH & H & H & H & FH & H & FH\\
+    Shark & H & H & - & H & H & H & H & H\\
+    Dolphin & H & H & H & H & H & H & H & H\\
+    Eel & FH & FH & H & H & H & FH & H & FH\\
+    \hline
+  \end{tabular}
+\end{table}
+% ----------------------------------------------------
+\begin{table}
+\caption{P($ P(E\cap F\cap G)= $)}
+  \begin{tabular}{|c|cccccccc|}
+  	\hline
+    - & Monkey & Donkey & Yak & Kangaroo & Aardvark & Antelope & Puma & Cheetah\\
+    \hline
+    Whale & EF & EF & E & - & - & F & - & F\\
+    Shark & E & E & E & - & - & - & - & -\\
+    Dolphin & E & E & E & - & - & - & - & G\\
+    Eel & EF & EF & EG & - & - & F & - & F\\
+    \hline
+  \end{tabular}
+\end{table}
+% ----------------------------------------------------
+\begin{table}
+\caption{P($ P(H\cup G)= $)}
+  \begin{tabular}{|c|cccccccc|}
+  	\hline
+    - & Monkey & Donkey & Yak & Kangaroo & Aardvark & Antelope & Puma & Cheetah\\
+    \hline
+    Whale & H & H & H & H & H & H & H & H\\
+    Shark & H & H & - & H & H & H & H & H\\
+    Dolphin & H & H & H & H & H & H & H & HG\\
+    Eel & H & H & HG & H & H & H & H & H\\
+    \hline
+  \end{tabular}
+\end{table}
+% ----------------------------------------------------
+\begin{table}
+\caption{P($ P(H\cap F^{C})= $)}
+  \begin{tabular}{|c|cccccccc|}
+  	\hline
+    - & Monkey & Donkey & Yak & Kangaroo & Aardvark & Antelope & Puma & Cheetah\\
+    \hline
+    Whale & H & H & H(F) & H(F) & H(F) & H & H(F) & H\\
+    Shark & H(F) & H(F) & (F) & H(F) & H(F) & H(F) & H(F) & H(F)\\
+    Dolphin & H(F) & H(F) & H(F) & H(F) & H(F) & H(F) & H(F) & H(F)\\
+    Eel & H & H & H(F) & H(F) & H(F) & H & H(F) & H\\
+    \hline
+  \end{tabular}
+\end{table}
+\end{document}
