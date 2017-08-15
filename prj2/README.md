@@ -1,9 +1,7 @@
 # Project 2
 ## Word Tally
 
-Kekoa Riggin
-Ling 473
-August 14, 2017
+Kekoa Riggin - Ling 473 - August 14, 2017
 
 ## My Approach
 
