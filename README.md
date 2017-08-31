@@ -6,50 +6,20 @@ This repo contains my projects for LING 473. I am taking this course as a prereq
 
 ## Assignments
 
-### Assignment 1
-
-Basic syntax, counting, and statistics. Written using LaTex.
-
-[Write up](hw1/README.md)
-
-### Assignment 2
-
-Basic Probability
-
-[Write up](hw2/README.md)
-
-### Assignment 3
-
-More Probability and N Gram
-
-[Write up](hw3/README.md)
+| Assignment | Description |
+| ---------- | ----------- |
+| [Assignment 1](hw1/README.md) | Basic syntax, counting, and statistics. Written using LaTex.
+| [Assignment 2](hw2/README.md) | Basic Probability |
+| [Assignment 3](hw3/README.md) | More Probability and N Gram |
 
 ## Projects
 
-### Project 1
-
-Constituent Counter for Penn Treebank Corpus
-
-[Write up](prj1/README.md)
-
-### Project 2
-
-Word tally for Corpus
-
-[Write up](prj2/README.md)
-
-### Project 3
-
-Finite State Machine for Adding Syllables to Thai Text
-
-[Write up](prj3/README.md)
-
-### Project 4
-
-Searching DNA sequences in Human Genome (Trie)
-
-[Write up](prj4/README.md)
-
-### Project 5
+| Project | Description |
+| ------- | ----------- |
+| [Project 1](prj1/README.md) | Constituent Counter for Penn Treebank Corpus |
+| [Project 2](prj2/README.md) | Word tally for Corpus |
+| [Project 3](prj3/README.md) | Finite State Machine for Adding Syllables to Thai Text |
+| [Project 4](prj4/README.md) | Searching DNA sequences in Human Genome (Trie) |
+| Project 5 | | 
 
 ## Paper Review
