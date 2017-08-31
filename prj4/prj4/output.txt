@@ -1,0 +1,2 @@
+/opt/dropbox/17-18/473/project4/hg19-GRCh37/chr13.dna
+/opt/dropbox/17-18/473/project4/hg19-GRCh37/chr1.dna
