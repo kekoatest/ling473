@@ -16,10 +16,10 @@ This repo contains my projects for LING 473. I am taking this course as a prereq
 
 | Project | Description |
 | ------- | ----------- |
-| [Project 1](prj1/README.md) | Constituent Counter for Penn Treebank Corpus |
-| [Project 2](prj2/README.md) | Word tally for Corpus |
-| [Project 3](prj3/README.md) | Finite State Machine for Adding Syllables to Thai Text |
-| [Project 4](prj4/README.md) | Searching DNA sequences in Human Genome (Trie) |
-| Project 5 | | 
+| [Project 1](prj1/README.md) | Count constituents in Penn Treebank Corpus |
+| [Project 2](prj2/README.md) | Count word tally in corpus |
+| [Project 3](prj3/README.md) | Add syllables to Thai text (finite state machine) |
+| [Project 4](prj4/README.md) | Search DNA sequences in human genome (trie) |
+| [Project 5](prj5/README.md) | Guess the language of a word from a multilinguial corpus | 
 
 ## Paper Review
