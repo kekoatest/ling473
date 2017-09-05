@@ -25,3 +25,5 @@ This repo contains my projects for LING 473. I am taking this course as a prereq
 ## Paper Review
 
 [Review of ACL Paper "Get To The Point: Summarization from Pointer-Generator Networks"](rev/kekoar.pdf)
+
+Written in ACL journal format
