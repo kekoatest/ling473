@@ -20,7 +20,7 @@ This repo contains my projects for LING 473. I am taking this course as a prereq
 | [Project 2](prj2/README.md) | Count word tally in corpus |
 | [Project 3](prj3/README.md) | Add syllables to Thai text (finite state machine) |
 | [Project 4](prj4/README.md) | Search DNA sequences in human genome (trie) |
-| [Project 5](prj5/README.md) | Guess the language of a word from a multilinguial corpus | 
+| [Project 5](prj5/README.md) | Guess the language of a word from a multilinguial corpus (Naïve Bayesian Classifier)| 
 
 ## Paper Review
 
