@@ -23,3 +23,7 @@ This repo contains my projects for LING 473. I am taking this course as a prereq
 | [Project 5](prj5/README.md) | Guess the language of a word from a multilinguial corpus | 
 
 ## Paper Review
+
+[Review of ACL Paper "Get To The Point: Summarization from Pointer-Generator Networks"](rev/kekoar.pdf)
+
+*Written in ACL journal format*
