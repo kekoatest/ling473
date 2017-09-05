@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.22)  28 AUG 2017 16:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.22)  2 SEP 2017 13:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -37,8 +37,7 @@ Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
 \symlasy=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
 (Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
-)
-No file acl2014.aux.
+) (./acl2014.aux)
 \openout1 = `acl2014.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
@@ -54,6 +53,7 @@ LaTeX Font Info:    ... okay on input line 39.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
 LaTeX Font Info:    ... okay on input line 39.
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 39.
+
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
@@ -77,155 +77,218 @@ LaTeX Font Info:    Try loading font information for OT1+pcr on input line 40.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 72.
-
-Underfull \hbox (badness 1308) in paragraph at lines 74--78
-[]\OT1/ptm/m/n/10.95 Authors from coun-tries in which ac-cess to
+Underfull \hbox (badness 10000) in paragraph at lines 42--56
+[]\OT1/ptm/m/n/10.95 Review of "Get to the Point:
  []
 
 
-Underfull \hbox (badness 2435) in paragraph at lines 74--78
-\OT1/ptm/m/n/10.95 tact the pub-li-ca-tion chairs, Alexan-der Koller
+Underfull \hbox (badness 10000) in paragraph at lines 42--56
+\OT1/ptm/m/n/10.95 Sum-ma-riza-tion with Pointer-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 74--78
-\OT1/ptm/m/n/10.95 (\OT1/pcr/m/n/10.95 koller@ling.uni-potsdam.de\OT1/ptm/m/n/1
-0.95 ) and
- []
-
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 80.
-
-Underfull \hbox (badness 5475) in paragraph at lines 79--82
-[]\OT1/ptm/m/n/10.95 We will make more de-tailed in-struc-tions
+Underfull \hbox (badness 10000) in paragraph at lines 42--56
+\OT1/ptm/m/n/10.95 Generator Net-works". Source:
  []
 
 
-Underfull \hbox (badness 2042) in paragraph at lines 79--82
-\OT1/ptm/m/n/10.95 avail-able at $\OT1/pcr/m/n/10.95 http : / / sites . google 
-. com /
+Underfull \hbox (badness 10000) in paragraph at lines 42--56
+\OT1/ptm/m/n/10.95 http://aclweb.org/anthology/P/P17/
  []
 
 
-LaTeX Warning: Reference `ssec:first' on page 1 undefined on input line 90.
-
-
-LaTeX Warning: Reference `sec:length' on page 1 undefined on input line 94.
-
-
-Underfull \hbox (badness 1122) in paragraph at lines 107--115
-\OT1/ptm/m/n/10.95 have an op-tion, we rec-om-mend that you use
+Underfull \hbox (badness 10000) in paragraph at lines 42--56
+\OT1/ptm/m/n/10.95 @InProceedingssee-liu-
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--56
+\OT1/ptm/m/n/10.95 manning:2017:Long, au-thor = See,
+ []
+
+
+Underfull \hbox (badness 8132) in paragraph at lines 42--56
+\OT1/ptm/m/n/10.95 Sum-ma-riza-tion with Pointer-Generator
+ []
+
+
+Underfull \hbox (badness 1701) in paragraph at lines 42--56
+\OT1/ptm/m/n/10.95 for Com-pu-ta-tional Lin-guis-tics (Vol-ume
+ []
+
+
+Underfull \hbox (badness 1852) in paragraph at lines 42--56
+\OT1/ptm/m/n/10.95 = Neu-ral sequence-to-sequence mod-els
+ []
+
+
+Underfull \hbox (badness 1048) in paragraph at lines 42--56
+\OT1/ptm/m/n/10.95 ing and re-ar-rang-ing pas-sages from the
+ []
+
+
+Underfull \hbox (badness 3417) in paragraph at lines 42--56
+\OT1/ptm/m/n/10.95 that aug-ments the stan-dard sequence-
+ []
+
+
+Underfull \hbox (badness 4429) in paragraph at lines 42--56
+\OT1/ptm/m/n/10.95 to-sequence at-ten-tional model in two
+ []
+
+
+Underfull \hbox (badness 7759) in paragraph at lines 42--56
+\OT1/ptm/m/n/10.95 which aids ac-cu-rate re-pro-duc-tion of
+ []
+
+
+Underfull \hbox (badness 4569) in paragraph at lines 42--56
+\OT1/ptm/m/n/10.95 to pro-duce novel words through the
+ []
+
+
+Underfull \hbox (badness 1648) in paragraph at lines 42--56
+\OT1/ptm/m/n/10.95 keep track of what has been sum-ma-
+ []
+
+
+Underfull \hbox (badness 1303) in paragraph at lines 42--56
+\OT1/ptm/m/n/10.95 ap-ply our model to the CNN / Daily
+ []
+
+
+Underfull \hbox (badness 6961) in paragraph at lines 42--56
+\OT1/ptm/m/n/10.95 the cur-rent ab-strac-tive state-of-the-art
+ []
+
+
+Underfull \hbox (badness 2229) in paragraph at lines 42--56
+\OT1/ptm/m/n/10.95 by at least 2 ROUGE points., url =
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 63.
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 63.
+
+Underfull \hbox (badness 1769) in paragraph at lines 74--75
+[]\OT1/ptm/m/n/10.95 Do the ex-per-i-men-tal re-sults con-vinc-ingly
+ []
+
+
+Underfull \hbox (badness 1292) in paragraph at lines 74--75
+\OT1/ptm/m/n/10.95 demon-strate the ben-e-fit of the ap-proach?
+ []
+
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
 [1{/home/unclenacho/.texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 160.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 93.
+
+Underfull \hbox (badness 1308) in paragraph at lines 95--99
+[]\OT1/ptm/m/n/10.95 Authors from coun-tries in which ac-cess to
+ []
 
 
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
-File: omsptm.fd 
-)
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 160.
+Underfull \hbox (badness 2435) in paragraph at lines 95--99
+\OT1/ptm/m/n/10.95 tact the pub-li-ca-tion chairs, Alexan-der Koller
+ []
 
 
-LaTeX Warning: Reference `font-table' on page 2 undefined on input line 218.
+Underfull \hbox (badness 10000) in paragraph at lines 95--99
+\OT1/ptm/m/n/10.95 (\OT1/pcr/m/n/10.95 koller@ling.uni-potsdam.de\OT1/ptm/m/n/1
+0.95 ) and
+ []
 
-[2]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 101.
 
-LaTeX Warning: Citation `Gusfield:97' on page 3 undefined on input line 264.
-
-
-LaTeX Warning: Citation `Gusfield:97' on page 3 undefined on input line 265.
-
-
-LaTeX Warning: Citation `Aho:72' on page 3 undefined on input line 267.
-
-
-LaTeX Warning: Citation `Chandra:81' on page 3 undefined on input line 267.
+Underfull \hbox (badness 5475) in paragraph at lines 100--103
+[]\OT1/ptm/m/n/10.95 We will make more de-tailed in-struc-tions
+ []
 
 
-LaTeX Warning: Citation `Gusfield:97' on page 3 undefined on input line 269.
+Underfull \hbox (badness 2042) in paragraph at lines 100--103
+\OT1/ptm/m/n/10.95 avail-able at $\OT1/pcr/m/n/10.95 http : / / sites . google 
+. com /
+ []
 
 
-LaTeX Warning: Citation `Aho:72' on page 3 undefined on input line 269.
+Underfull \hbox (badness 1122) in paragraph at lines 128--136
+\OT1/ptm/m/n/10.95 have an op-tion, we rec-om-mend that you use
+ []
 
 
-LaTeX Warning: Citation `Gusfield:97' on page 3 undefined on input line 272.
+Underfull \vbox (badness 2119) has occurred while \output is active []
+
+ [2]
+[3]
+
+LaTeX Warning: Citation `Aho:72' on page 4 undefined on input line 288.
 
 
-LaTeX Warning: Citation `Gusfield:97' on page 3 undefined on input line 276.
+LaTeX Warning: Citation `Aho:72' on page 4 undefined on input line 290.
 
 
-LaTeX Warning: Citation `Gusfield:97' on page 3 undefined on input line 286.
+Underfull \hbox (badness 10000) in paragraph at lines 307--308
+[]\OT1/ptm/m/n/10.95 ``We pre-vi-ously showed (Gus-field,
+ []
 
 
-LaTeX Warning: Citation `Gusfield:97' on page 3 undefined on input line 290.
-
-
-LaTeX Warning: Citation `APA:83' on page 3 undefined on input line 305.
-
-
-LaTeX Warning: Citation `ACM:83' on page 3 undefined on input line 308.
-
-
-Underfull \hbox (badness 1152) in paragraph at lines 310--313
+Underfull \hbox (badness 1152) in paragraph at lines 331--334
 []\OT1/ptm/m/n/10.95 The L[]T[]X and BibT[]X style files pro-vided
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 322.
+(Font)              <9> on input line 343.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 322.
+(Font)              <5> on input line 343.
 
-Underfull \hbox (badness 1142) in paragraph at lines 328--333
+Underfull \hbox (badness 1142) in paragraph at lines 349--354
 \OT1/ptm/b/n/10.95 Illustrations\OT1/ptm/m/n/10.95 : Place fig-ures, ta-bles, a
 nd pho-
  []
 
-[3]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 340.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 361.
 
-Underfull \hbox (badness 1087) in paragraph at lines 347--356
+Underfull \hbox (badness 1087) in paragraph at lines 368--377
 \OT1/ptm/m/n/10.95 bind-ings al-low La-TeXML to ren-der the com-
  []
 
 
-Underfull \hbox (badness 1466) in paragraph at lines 347--356
+Underfull \hbox (badness 1466) in paragraph at lines 368--377
 \OT1/ptm/m/n/10.95 pack-ages that are of-fi-cially sup-ported by La-
  []
 
-[4] (./acl2014.aux)
+[4] [5
 
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+] (./acl2014.aux) ) 
 Here is how much of TeX's memory you used:
- 496 strings out of 494910
- 6152 string characters out of 6179836
+ 499 strings out of 494910
+ 6186 string characters out of 6179836
  59695 words of memory out of 5000000
- 3817 multiletter control sequences out of 15000+600000
+ 3818 multiletter control sequences out of 15000+600000
  29759 words of font info for 64 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 23i,9n,19p,173b,256s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/urw/courier/ucrr8a.pfb></home/unclenacho/texmf/fonts/type1/u
-rw/times/utmb8a.pfb></home/unclenacho/texmf/fonts/type1/urw/times/utmr8a.pfb></
-home/unclenacho/texmf/fonts/type1/urw/times/utmri8a.pfb>
-Output written on acl2014.pdf (4 pages, 83401 bytes).
+ 23i,9n,19p,982b,256s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}<
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></home/unclenacho/te
+xmf/fonts/type1/urw/times/utmb8a.pfb></home/unclenacho/texmf/fonts/type1/urw/ti
+mes/utmr8a.pfb></home/unclenacho/texmf/fonts/type1/urw/times/utmri8a.pfb>
+Output written on acl2014.pdf (5 pages, 85692 bytes).
 PDF statistics:
- 38 PDF objects out of 1000 (max. 8388607)
- 26 compressed objects within 1 object stream
+ 41 PDF objects out of 1000 (max. 8388607)
+ 28 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

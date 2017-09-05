@@ -1,0 +1,277 @@
+
+#---------------------------------------------------------------------------
+
+Abstract (1):
+
+Background
+
+Neural sequence-to-sequence models have provided a viable new approach for ab- stractive text summarization (meaning they are not restricted to simply selecting and rearranging passages from the origi- nal text). However, 
+
+The Problem
+
+these models have two shortcomings: they are liable to reproduce factual details inaccurately, and they tend to repeat themselves.
+
+The Solution
+
+In this work we propose a novel architecture that augments the standard sequence-to-sequence attentional model in two orthogonal ways. 
+
+First, we use a hybrid pointer-generator network that can copy words from the source text via pointing, which aids accurate reproduction of information, while retaining the ability to produce novel words through the
+generator. 
+
+Second, we use coverage to keep track of what has been summarized, which discourages repetition.
+
+The Method and results
+
+We apply our model to the CNN / Daily Mail summarization task, outperforming the current abstractive state-of-the-art by at least 2 ROUGE points.
+
+#---------------------------------------------------------------------------
+
+Introduction (1):
+
+Explanation of types of summarization methods
+
+There are two broad approaches to summarization: extractive and abstractive.
+
+Extractive methods assemble summaries exclusively from passages (usually whole sentences) taken directly from the source text, while
+
+abstractive methods may generate novel words and phrases not featured in the source text – as a human-written abstract usually does.
+
+Benefits of methods
+
+The extractive approach is easier, because copying large chunks of text from the source document ensures baseline levels of grammaticality and accuracy. On the other hand, sophisticated abilities that are crucial to high-quality summarization, such as paraphrasing, generalization, or the incorporation of real-world knowledge, are possible only in an abstractive framework
+
+RNN models
+
+recurrent neural networks (RNNs) both read and freely generate text, has made abstractive summarization viable
+
+Though these systems are promising, they exhibit undesirable behavior such as inaccurately reproducing factual details, an inability to deal with out-of-vocabulary (OOV) words, and repeating themselves
+
+The Data set
+
+we apply our model to the recently-introduced CNN/Daily Mail dataset (Hermann et al., 2015; Nallap-ati et al., 2016), which contains news articles (39
+sentences on average) paired with multi-sentence summaries
+
+the Results
+
+and show that we outperform the state-of-the-art abstractive system by at least 2 ROUGE points.
+
+The Method explained
+
+Our hybrid pointer-generator network facilitates copying words from the source text via pointing (Vinyals et al., 2015), which improves accuracy and handling of OOV words, while retaining the ability to generate new words.
+
+Other methods that have been used
+
+The network, which can be viewed as a balance between extractive and abstractive approaches, is similar to Gu et al.’s (2016) CopyNet and Miao and Blunsom’s (2016) Forced-Attention Sentence Compression that were applied to short-text summarization.
+
+the new preposition
+
+We propose a novel variant of the coverage vector (Tu et al., 2016) from Neural Machine Translation, which we use to track and control coverage of the source document. We show that coverage is remarkably effective for eliminating repetition.
+
+#-----------------------------------------------------------------------------
+
+Our Models (2)
+
+Outline:
+
+In this section we describe 
+
+(1) our baseline sequence-to-sequence model, 
+(2) our pointer-generator model, and 
+(3) our coverage mechanism that can be added to either of the first two models.
+
+#......................................................................
+
+Sequence-to-sequence attentional model (2)
+
+Baseline model
+
+Our baseline model is similar to that of Nallapati et al. (2016)
+
+The Procoess
+
+The tokens of the article w i are fed one-by-one into the encoder (a single-layer bidirectional LSTM), producing a sequence of encoder hidden states h i . 
+
+On each step t, the decoder (a single-layer unidirectional LSTM) receives the word embedding of the previous word (while training, this is the previous word of the reference summary; 
+
+at test time it is the previous word emitted by the decoder), and has decoder state s t .
+
+Attention distribution
+
+The attention distribution a t is calculated as in Bahdanau et al. (2015):
+[[[See page 2]]] 1 and 2
+
+The attention distribution can be viewed as a probability distribution over the source words,that tells the decoder where to look to produce the next word.
+
+Context vector
+
+Next, the attention distribution is used to produce a weighted sum of the encoder hidden states, known as the context vector h t ∗ :
+[[[see page 3]]] 3
+
+vocabulary distribution
+
+The context vector, which can be seen as a fixed-size representation of what has been read from the source for this step, is concatenated with the decoder state s t and fed through two linear layers to produce the vocabulary distribution P vocab :
+
+P vocab is a probability distribution over all words in the vocabulary,
+[[[see page 3]]] 4
+
+Distribution for word prediction
+
+and provides us with our final distribution from which to predict words w:
+[[[see page 3]]] 5
+
+loss for timestep
+
+During training, the loss for timestep t is the negative log likelihood of the target word w t ∗ for that timestep:
+[[[see page 3]] 6
+
+overall loss
+
+and the overall loss for the whole sequence is:
+[[[see page 3]]] 7
+
+#............................................................................
+
+Pointer-generator network (3)
+
+Our pointer-generator network is a hybrid between our baseline and a pointer network (Vinyals et al., 2015), as it allows both copying words via pointing, and generating words from a fixed vocabulary.
+
+Differences from baseline model
+
+In the pointer-generator model (depicted in Figure 3) the attention distribution a t and context vector h t ∗ are calculated as in section 2.1. 
+
+generation probability
+
+In addition, the generation probability p gen ∈ [0, 1] for timestep t is calculated from the context vector h t ∗ , the decoder state s t and the decoder input x t :
+[[[see page 3]]] 8
+
+how to generate words in this model
+
+Next, p gen is used as a soft switch to choose be-
+tween generating a word from the vocabulary by
+sampling from P vocab , or copying a word from the
+input sequence by sampling from the attention dis-
+tribution a t .
+
+Extended vocabulary
+
+For each document let the extended vocabulary denote the union of the vocabulary, and all words appearing in the source document.
+
+We obtain the following probability distribution over the extended vocabulary:
+[[[see page 3]]] 9
+
+OOV as a primary weakness of sequence-to-sequence
+
+Note that if w is an out-of-vocabulary (OOV) word, then P vocab (w) is zero; similarly if w does not appear in the source document, then ∑ i:w i =w a ti is zero. The ability to produce OOV words is one of the primary advantages of pointer-generator models; by contrast models such as our baseline are restricted to their pre-set vocabulary.
+
+#....................................................................
+
+Coverage mechanism (4)
+
+Repetition is a common problem for sequence-to-sequence models (Tu et al., 2016; Mi et al., 2016; Sankaran et al., 2016; Suzuki and Nagata, 2016), and is especially pronounced when generating multi-sentence text
+
+The solution
+
+We adapt the coverage model of Tu et al. (2016) to solve the
+problem. 
+
+coverage vector
+
+In our coverage model, we maintain a coverage vector c t , which is the sum of attention distributions over all previous decoder timesteps:
+[[[see page 4]]] 10
+
+Intuitively, c t is a (unnormalized) distribution over the source document words that represents the degree of coverage that those words have received from the attention mechanism so far. Note that c 0 is a zero vector, because on the first timestep, none of the source document has been covered.
+
+change to E1
+[[[see page 4]]] 11
+
+Why this works
+
+w c is a learnable parameter vector of same length as v. This ensures that the attention mechanism’s current decision (choosing where to attend next) is informed by a reminder of its previous decisions (summarized in c t ). This should make it easier for the attention mechanism to avoid repeatedly attending to the same locations, and thus avoid generating repetitive text.
+
+redefine coverage loss
+
+We find it necessary (see section 5) to addition-lly define a coverage loss to penalize repeatedly attending to the same locations:
+[[[see page 4]]] 12
+
+Note that the coverage loss is bounded; in particular covloss t ≤ ∑ i a ti = 1.
+
+Equation (12) differs from the coverage loss used in Machine Translation. 
+
+In MT, we assume that there should be a roughly one-to-one translation ratio; accordingly the final coverage vector is penalized if it is more or less than 1.
+
+Our loss function is more flexible: because summarization should not require uniform coverage, we only penalize the overlap between each attention distribution and the coverage so far – preventing repeated attention. 
+
+composite loss function
+
+Finally, the coverage loss, reweighted by some hyperparameter λ , is added to the primary loss function to yield a new composite loss function:
+[[[see page 4]]] 13
+
+
+# ------------------------------------------------------------------------
+
+Related Work (4)
+
+# ............................................................
+
+Neural abstractive summarization
+
+Neural abstractive summarization. Rush et al. (2015) were the first to apply modern neural networks to abstractive text summarization, achieving state-of-the-art performance on DUC-2004 and Gigaword, two sentence-level summarization datasets.
+
+Their approach, which is centered on the attention mechanism, has been augmented with recurrent decoders (Chopra et al., 2016), Abstract Meaning Representations (Takase et al., 2016), hierarchical networks (Nallapati et al., 2016), variational autoencoders (Miao and Blunsom, 2016), and direct optimization of the performance metric (Ranzato et al., 2016), further improving performance on those datasets.
+
+However, large-scale datasets for summarization of longer text are rare.
+
+Nallapati et al. (2016) adapted the DeepMind question-answering dataset (Hermann et al., 2015) for summarization, resulting in the CNN/Daily Mail dataset, and provided the first abstractive baselines.
+
+The same authors then published a neural extractive approach (Nallapati et al., 2017), which uses hierarchical RNNs to select sentences, and found that it significantly outperformed their abstractive result with respect to the ROUGE metric. 
+
+To our knowledge, these are the only two published results on the full dataset.
+
+Prior to modern neural methods, abstractive summarization received less attention than extractive summarization, but Jing (2000) explored cutting unimportant parts of sentences to create summaries, and Cheung and Penn (2014) explore sentence fusion using dependency trees.
+
+# .........................................................
+
+Pointer-generator networks
+
+Pointer-generator networks. The pointer network (Vinyals et al., 2015) is a sequence-to-sequence model that uses the soft attention distribution of Bahdanau et al. (2015) to produce an output sequence consisting of elements from the input sequence. 
+
+The pointer network has been used to create hybrid approaches for NMT (Gulcehre et al., 2016), language modeling (Merity et al., 2016), and summarization (Gu et al., 2016; Gulcehre et al., 2016; Miao and Blunsom, 2016; Nallapati et al., 2016; Zeng et al., 2016). 
+
+Our approach is close to the Forced-Attention Sentence Compression model of Miao and Blunsom (2016) and the CopyNet model of Gu et al. (2016), with some small differences: 
+
+(i) We calculate an explicit switch probability p gen , whereas
+Gu et al. induce competition through a shared soft-max function. 
+(ii) We recycle the attention distribution to serve as the copy distribution, but Gu et al. use two separate distributions. 
+(iii) When a word appears multiple times in the source text, we sum probability mass from all corresponding parts of the attention distribution, whereas Miao and Blunsom do not. 
+
+Our reasoning is that 
+(i) calculating an explicit p gen usefully enables us to raise or lower the probability of all generated words or all copy words at once, rather than individually, 
+(ii) the two distributions serve such similar purposes that we find our simpler approach suffices, and 
+(iii) we observe that the pointer mechanism often copies a word while attending to multiple occurrences of it in the source text.
+
+Our approach is considerably different from that of Gulcehre et al. (2016) and Nallapati et al. (2016). 
+
+Those works train their pointer components to activate only for out-of-vocabulary words or named entities (whereas we allow our model to freely learn when to use the pointer), and they do not mix the probabilities from the copy distribution and the vocabulary distribution. 
+
+We believe the mixture approach described here is better for abstractive summarization – in section 6 we show that the copy mechanism is vital for accurately reproducing rare but in-vocabulary words, and in section 7.2 we observe that the mixture model en- ables the language model and copy mechanism
+
+#..........................................................
+
+Coverage (5)
+
+Originating from Statistical Machine Translation (Koehn, 2009), coverage was adapted for NMT by Tu et al. (2016) and Mi et al. (2016), who both use a GRU to update the coverage vector each step. 
+
+We find that a simpler approach – summing the attention distributions to obtain the coverage vector – suffices. 
+
+In this respect our approach is similar to Xu et al. (2015), who apply a coverage-like method to image captioning, and Chen et al. (2016), who also incorporate a coverage mechanism (which they call ‘distraction’) as described in equation (11) into neural summarization of longer text.
+
+Temporal attention is a related technique that has been applied to NMT (Sankaran et al., 2016) and summarization (Nallapati et al., 2016). 
+
+In this approach, each attention distribution is divided by the sum of the previous, which effectively dampens repeated attention. 
+
+We tried this method but found it too destructive, distorting the signal from the attention mechanism and reducing performance. 
+
+We hypothesize that an early intervention method such as coverage is preferable to a post hoc method such as temporal attention – it is better to inform the attention mechanism to help it make better decisions, than to override its decisions altogether. This theory is supported by the large boost that coverage gives our ROUGE scores (see Table 1), compared to the smaller boost given by temporal attention for the same task (Nallapati et al., 2016).
+
+
+

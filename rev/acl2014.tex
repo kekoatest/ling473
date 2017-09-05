@@ -39,31 +39,52 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-  This document contains the instructions for preparing a camera-ready
-  manuscript for the proceedings of ACL-2014. The document itself
-  conforms to its own specifications, and is therefore an example of
-  what your manuscript should look like. These instructions should be
-  used for both papers submitted for review and for final versions of
-  accepted papers.  Authors are asked to conform to all the directions
-  reported in this document.
+	Review of "Get to the Point: Summarization with Pointer-Generator Networks". 
+Source: http://aclweb.org/anthology/P/P17/
+@InProceedings{see-liu-manning:2017:Long,
+author    = {See, Abigail  and  Liu, Peter J.  and  Manning, Christopher D.},
+title     = {Get To The Point: Summarization with Pointer-Generator Networks},
+booktitle = {Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+month     = {July},
+year      = {2017},
+address   = {Vancouver, Canada},
+publisher = {Association for Computational Linguistics},
+pages     = {1073--1083},
+abstract  = {Neural sequence-to-sequence models have provided a viable new approach for abstractive text summarization (meaning they are not restricted to simply selecting and rearranging passages from the original text). However, these models have two shortcomings: they are liable to reproduce factual details inaccurately, and they tend to repeat themselves. In this work we propose a novel architecture that augments the standard sequence-to-sequence attentional model in two orthogonal ways. First, we use a hybrid pointer-generator network that can copy words from the source text via pointing, which aids accurate reproduction of information, while retaining the ability to produce novel words through the generator. Second, we use coverage to keep track of what has been summarized, which discourages repetition. We apply our model to the CNN / Daily Mail summarization task, outperforming the current abstractive state-of-the-art by at least 2 ROUGE points.},
+  url       = {http://aclweb.org/anthology/P17-1099}
+} 
 \end{abstract}
 
-\section{Credits}
+\section{Instructions}
 
-This document has been adapted from the instructions for earlier ACL
-proceedings, including those for ACL-2012 by Maggie Li and Michael
-White, those from ACL-2010 by Jing-Shing Chang and Philipp Koehn,
-those for ACL-2008 by Johanna D. Moore, Simone Teufel, James Allan,
-and Sadaoki Furui, those for ACL-2005 by Hwee Tou Ng and Kemal
-Oflazer, those for ACL-2002 by Eugene Charniak and Dekang Lin, and
-earlier ACL and EACL formats. Those versions were written by several
-people, including John Chen, Henry S. Thompson and Donald
-Walker. Additional elements were taken from the formatting
-instructions of the {\em International Joint Conference on Artificial
-  Intelligence}.
+A summary of the paper, detailing:
+
+\begin{itemize}
+\item the problem addressed,
+\item the approach,
+\item the main results.
+\item Note: this should be a summary and not a direct copy of the text of the paper. You can copy figures and tables from the paper.
+\end{itemize}
+
+Note: this should be a summary and not a direct copy of the text of the paper. You can copy figures and tables from the paper.
+A critical analysis, addressing the following points:
+
+\begin{itemize}
+\item Did the authors explain the problem and review the prior work or the state-of-the-art techniques for the problem?
+\item Do the experimental results convincingly demonstrate the benefit of the approach? (e.g. have the authors used a reasonably strong baseline and fair experimental conditions).
+\item What are the limitations of the approach? (e.g. will it work on other languages and in other settings (more or less data, availability of annotated resources, constraints on running time or memory consumption))
+\item Are there other possible applications of the approach (e.g. can we address other phenomena using a similar approach)?
+\item What are possible directions for future work building on this approach or addressing the same problem in a better way?
+\end{itemize}
+
+Don’t worry too much about the prose quality. The main goal is to see whether you understand the paper and can think critically about it. Submit your critical paper review to your CollectIt dropbox in PDF format.
+
+Your review should have an abstract and be at least two pages according to the ACL template. Cite the paper you are reviewing, plus any other papers you mention, in a References section.
 
 \section{Introduction}
 
+{\em International Joint Conference on Artificial
+  Intelligence}.
 The following instructions are directed to authors of papers submitted
 to ACL-2014 or accepted for publication in its proceedings. All
 authors are required to adhere to these specifications. Authors are
@@ -389,13 +410,14 @@ when submitting your paper for review.
 
 \begin{thebibliography}{}
 
-\bibitem[\protect\citename{Aho and Ullman}1972]{Aho:72}
-Alfred~V. Aho and Jeffrey~D. Ullman.
-\newblock 1972.
-\newblock {\em The Theory of Parsing, Translation and Compiling}, volume~1.
-\newblock Prentice-{Hall}, Englewood Cliffs, NJ.
-
-\bibitem[\protect\citename{{American Psychological Association}}1983]{APA:83}
+\bibitem[\protect\citename{See et. al.}2017]{See:1073}
+See, Abigail  and  Liu, Peter J.  and  Manning, Christopher D.
+\newblock 2017.
+\newblock Get To The Point: Summarization with Pointer-Generator Networks.
+\newblock {\em Association for Computational Linguistics},
+  July 2017:1073--1083.
+  
+  \bibitem[\protect\citename{{American Psychological Association}}1983]{APA:83}
 {American Psychological Association}.
 \newblock 1983.
 \newblock {\em Publications Manual}.
@@ -409,7 +431,7 @@ Alfred~V. Aho and Jeffrey~D. Ullman.
 \bibitem[\protect\citename{Chandra \bgroup et al.\egroup }1981]{Chandra:81}
 Ashok~K. Chandra, Dexter~C. Kozen, and Larry~J. Stockmeyer.
 \newblock 1981.
-\newblock Alternation.
+\newblock Get To The Point: Summarization with Pointer-Generator Networks.
 \newblock {\em Journal of the Association for Computing Machinery},
   28(1):114--133.
 
